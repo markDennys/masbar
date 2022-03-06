@@ -1,0 +1,39 @@
+<div class="shop-area">
+  <h1 class="title">É hora de comprar aquela gelada...</h1>
+  <div class="slide-drinks">
+    <div class="beer-area">
+      <div class="image">
+        <button class="seta" (click)="sub()"><</button>
+        <img
+          [src]="mocksBeers[slideNumber].image"
+          alt="cerveja"
+          class="image-beer"
+        />
+        <button class="seta" (click)="add()">></button>
+      </div>
+      <p class="name">
+        {{mocksBeers[slideNumber].name}} - R${{mocksBeers[slideNumber].price}}
+      </p>
+      <div class="visor">
+        <button class="btn subt" (click)="subtqtd()">-</button>
+        <p class="qtd">{{qtd}}</p>
+        <button class="btn adc" (click)="addqtd()">+</button>
+      </div>
+   
+    </div>
+    <div class="card">
+      <div class="visor-card">
+        <span  class="beers-selec" *ngFor="let item of mocksBeers">
+          <div class="list" *ngIf="item.qtd > 0">{{item.qtd}}x  {{item.name}} : R${{item.price}}</div>
+        </span >
+        <h3 class="total" *ngIf="toShowButtons()">total:R${{getTotal()}}</h3>
+        <div class="buttons">
+          <button class="pay" [disabled]="!toShowButtons()" [ngClass]="{'disabled-1': !toShowButtons()}">Pagar</button>
+          <button class="esv" [disabled]="!toShowButtons()" [ngClass]="{'disabled': !toShowButtons()}" (click)="esvaziar()">Esvaziar carrinho</button>
+        </div>
+     
+      </div>
+  
+    </div>
+  </div>
+</div>

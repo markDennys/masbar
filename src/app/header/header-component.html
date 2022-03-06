@@ -1,0 +1,23 @@
+<div class="headerContainer">
+  <header class="header">
+    <h1 class="logo">MASTUR BAR</h1>
+    <menu-hamburguer (toogleNav)="toogleNav($event)"></menu-hamburguer>
+    <nav class="nav" [ngClass]="{'show-nav': showNav}">
+      <ul class="ul-header">
+        <li>
+          <a href="#"  class="orange"> Cerveja </a>
+        </li>
+        <li>
+          <a href="#"> Compre já </a>
+        </li>
+        <li>
+          <a href="#"> Chame seus amigos </a>
+          
+        </li>
+        <li>
+          <a href="#"> Fale conosco </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</div>
