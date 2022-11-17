@@ -1,2 +1,12 @@
-<app-header> </app-header> 
-<app-home> </app-home>
+<div class="wrapping-box-container">
+  <div id="controls" class="controls">
+      <!-- Button that will begin a Liveness Check -->
+      <button id="liveness-button" disabled (click)="onLivenessCheckPressed()" class="big-button">3D Liveness Check</button>
+      <button id="enroll-button" disabled (click)="onEnrollUserPressed()" class="big-button">Enroll User</button>
+      <!-- The status container that will be updated appropriately based on current state of FaceTecSDK -->
+      <p id="status">Initializing...</p>
+  </div>
+  <div id="custom-logo-container">
+    <img class="facetec-logo" src="../assets/images/facetec_logo.png">
+  </div>
+</div>

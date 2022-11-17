@@ -1,27 +1,36 @@
-# NmyWallet
+**Limited Support Notice**
+--------------------------
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
+This sample application and sample code are meant for example purposes. This example is not guaranteed to run out of the box as it may have been written for an older version of the FaceTec Browser SDK than we currently officially support for development purposes.
 
-## Development server
+For experienced developers, this example should be enough to port the FaceTec Browser SDK into your own application. There may be some work required update the sample code to the very latest released "Browser/Web/JS" SDK, which can be downloaded here - https://dev.facetec.com/#/downloads.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This example is not recommended for production code. It is designed only to show the minimum coded needed to perform a Liveness check with the FaceTec Browser SDK.
 
-## Code scaffolding
+Hopefully this is enough to get you going!
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+If you have any more technical questions or need assistance upgrading this library to the latest version of the FaceTec Browser SDK, please feel free to contact us at support@facetec.com
+------------------------------
 
-## Build
+**End Limited Support Notice**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Pre-requisites
+------------
 
-## Running unit tests
+1. node -v
+    - Angular requires a current, active LTS, or maintenance LTS version of Node.js <https://nodejs.org/en/about/releases/>
+2. npm install -g @angular/cli
+    - Install the Angular CLI
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Steps to Run
+------------
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Download the latest "Browser/JS SDK" from <https://dev.facetec.com/#/downloads>
+2. Copy the "core-sdk" folder from downloaded FaceTecSDK-browser-x.x.x folder and place it inside this project's "src/assets" folder.
+3. Open Config.js in the "assets" folder and replace the DeviceKeyIdentifier variable with the DeviceKeyIdentifier from your developer account page <https://dev.facetec.com/#/account> and save the file.
+4. Open terminal in this project's main folder.
+5. Run the following commands:
+    npm install
+        -- This command installs the necessary dependencies for building the app.
+    ng serve --open
+        -- This will start the sample app and watch for changes.
